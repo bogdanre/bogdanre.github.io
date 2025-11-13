@@ -7,14 +7,15 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 
 
 <BaseLayout>
-  <section class="static top-0 left-0 right-0 mx-auto max-w-4xl px-10">
-    <div class="relative justify-center left flex flex-col my-6 bg-ctp-surface0 shadow-sm border-slate-100 rounded-lg w-200">
-      <div class="p-4">
-        <h5 class="mb-2 text-2xl font-semibold bg-linear-to-bl from-ctp-blue inline-block to-green-400 bg-clip-text text-transparent z-1">
+  <section class="">
+    <!-- Center this div -->
+    <div class="">
+      <div class="bg-ctp-surface0 rounded-lg shadow-md p-4 mb-8">
+        <h5 class=" text-4xl font-semibold bg-linear-to-bl from-ctp-blue inline-block to-green-400 bg-clip-text text-transparent z-1 py-2">
          Hi, I'm Bogdan
         </h5>
 
-        <div class="leading-normal font-light z-0">
+        <div class="text-2xl">
 
           <p>
           I like Web Development and creating user friendly software.
@@ -32,9 +33,9 @@ import BaseLayout from '../layouts/BaseLayout.astro';
         </div>
         <br/>
         
-      <div>
+      <div class="text-2xl">
         <a
-          href="../public/cv.pdf"
+          href="/cv"
           target="_blank"
           rel="noopener noreferrer"
           class="text-ctp-blue underline hover:text-blue-800"
