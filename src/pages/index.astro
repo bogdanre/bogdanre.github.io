@@ -1,0 +1,47 @@
+---
+//import Navbar from '../components/Navbar.astro';
+import "../styles/global.css";
+import BaseLayout from '../layouts/BaseLayout.astro';
+//import { BRAND } from 'astro:schema';
+---
+
+
+<BaseLayout>
+  <section class="static top-0 left-0 right-0 mx-auto max-w-4xl px-10">
+    <div class="relative justify-center left flex flex-col my-6 bg-ctp-surface0 shadow-sm border-slate-100 rounded-lg w-200">
+      <div class="p-4">
+        <h5 class="mb-2 text-2xl font-semibold bg-linear-to-bl from-ctp-blue inline-block to-green-400 bg-clip-text text-transparent z-1">
+         Hi, I'm Bogdan
+        </h5>
+
+        <div class="leading-normal font-light z-0">
+
+          <p>
+          I like Web Development and creating user friendly software.
+        </p>
+
+        <br/>
+        <p>
+          Currently I am a student of computer science at the University of Paderborn.
+          I am a student assistant at the chair of empirical software engineering where I help with research on ethics and usability.
+        </p>
+        <br/>
+        <p>
+          This website is very much WIP right now and more content will follow soon.
+        </p>
+        </div>
+        <br/>
+        
+      <div>
+        <a
+          href="../public/cv.pdf"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="text-ctp-blue underline hover:text-blue-800"
+        >
+        Download my CV (German)
+        </a>
+      </div>
+  </section>
+
+</BaseLayout>

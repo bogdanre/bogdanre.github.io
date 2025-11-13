@@ -1,0 +1,12 @@
+@import "tailwindcss";
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@import "@catppuccin/tailwindcss/mocha.css";
+
+/* Optional: dein globales Design */
+body {
+  @apply bg-ctp-base text-ctp-text font-sans;
+}
+
