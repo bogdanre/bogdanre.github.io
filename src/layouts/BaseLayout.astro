@@ -2,6 +2,7 @@
 import Navbar from '../components/Navbar.astro';
 import "../styles/global.css";
 import ThemeToggle from '../components/ThemeToggle.astro';
+import AnimatedSlot from '../components/AnimatedSlot.jsx';
 ---
 <html lang="de" data-theme="dim">
   <head>
@@ -19,7 +20,9 @@ import ThemeToggle from '../components/ThemeToggle.astro';
     <main class="max-w-4xl mx-auto p-8">
 
 
-        <slot />
+        <AnimatedSlot client:load>
+          <slot />
+        </AnimatedSlot>
 
     
     </main>
