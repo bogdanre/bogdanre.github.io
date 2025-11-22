@@ -1,4 +1,7 @@
 @import "tailwindcss";
+@plugin "daisyui" {
+  themes: light --default, dim --prefersdark, dim, light;
+};
 
 @tailwind base;
 @tailwind components;
@@ -7,6 +10,6 @@
 
 /* Optional: dein globales Design */
 body {
-  @apply bg-ctp-base text-ctp-text lg:text-lg font-sans;
+  @apply text-ctp-text font-sans bg-base-100 text-4xl lg:text-2xl;
 }
 
