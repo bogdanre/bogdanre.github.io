@@ -12,25 +12,27 @@ permissions:
 jobs:
   build:
     runs-on: ubuntu-latest
-    steps:
-      - name: Checkout repo
-        uses: actions/checkout@v4
+  steps:
+    - name: Checkout repo
+      uses: actions/checkout@v4
 
-      - name: Setup Node
-        uses: actions/setup-node@v4
-        with:
-          node-version: 20
+    
+    - name: Build CV (LaTeX)
+      uses: xu-cheng/latex-action@v3
+      with:
+        root_file: main.tex
+        working_directory: cv
 
-      - name: Install dependencies
-        run: npm ci
+    - name: Move CV to public
+      run: |
+        mkdir -p public
+        mv cv/main.pdf public/cv.pdf
 
-      - name: Build Astro
-        run: npm run build
-
-      - name: Upload artifact
-        uses: actions/upload-pages-artifact@v3
-        with:
-          path: dist
+    
+    - name: Setup Node
+      uses: actions/setup-node@v4
+      with:
+        node-version: 20
 
   deploy:
     needs: build
